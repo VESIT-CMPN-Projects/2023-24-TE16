@@ -153,14 +153,14 @@ def detectViolence():
 
                 latitude, longitude = get_location_coordinates()
                 if latitude is not None and longitude is not None:
-                    bot = telepot.Bot('6365957289:AAFajX1s_LeOTAGmNMzNbQSLM3B8HjVYn7s')
-                    telegram_group_id = "https://t.me/violence_detection_ai"
+                    bot = telepot.Bot('your bot id')
+                    telegram_group_id = "your group id"
                     map_link = generate_map_link(latitude, longitude)
                     message = f"VIOLENCE ALERT!! \nLATITUDE: {latitude} \nLONGITUDE: {longitude} \nTIME: {timeMoment}\nMap Link: {map_link}"
-                    bot.sendMessage(1405125530, message)
-                    bot.sendPhoto(1405125530, photo=open('finalImage.jpg', 'rb'))
-                    bot.sendMessage(1405125530, "FACES OBTAINED")
-                    bot.sendPhoto(1405125530, photo=open('faces.png', 'rb'))
+                    bot.sendMessage(messageid, message)
+                    bot.sendPhoto(messageid, photo=open('finalImage.jpg', 'rb'))
+                    bot.sendMessage(messageid, "FACES OBTAINED")
+                    bot.sendPhoto(messageid, photo=open('faces.png', 'rb'))
 
                     sendAlert = 1
                 else:
